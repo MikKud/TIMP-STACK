@@ -13,11 +13,7 @@ public:
 	{
 		first=0;
 	}
-	~List()
-	{
-		if(!isEmpty())
-			removeAll();
-	}
+	
 	bool isEmpty()
 	{
 		return first==0;
