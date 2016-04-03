@@ -14,6 +14,9 @@ public:
 	next = nullptr;
 	info = "";
 	}
+	/** func
+функция засовывает элемент по индексу
+*/
 	void add(int i, string data)
 {
 	if (i == 0)
@@ -33,6 +36,9 @@ public:
 		}
 	}
 }
+/** func
+функция получает элемент по индексу
+*/
 	void get(int i)
 	{
 	if (next == nullptr && info == "")  
@@ -60,6 +66,9 @@ public:
 	}
 
 }
+/** func
+функция удаляет элемент по индексу
+*/
 	void del(int i)
 	{
 	list *p = this;
