@@ -1,0 +1,47 @@
+
+#include "stdafx.h"
+#include <stdio.h>
+#include <string>
+using namespace std;
+
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+#include <clocale>
+#include "List.h"
+using namespace std;
+
+string rezult = "";
+
+
+int main()
+{
+	int N;
+	string x;
+	string s;
+	List A;
+
+	setlocale(LC_CTYPE, "Russian");
+	cin >> N;
+
+	for (int i = 1; i <= N; i++) {
+		cin >> s;
+		if (s == "add") {
+			cin >> x;
+			A.pushEnd(x);
+		}
+		if (s == "get") {
+			A.getEnd(rezult);
+		}
+		if (s == "del") {
+			A.removeEnd();
+		}
+	}
+
+	cout << endl << "Выход:" << endl;
+	cout << rezult;
+	system("pause");
+	return 0;
+}
+
