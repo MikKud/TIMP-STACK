@@ -18,11 +18,17 @@ public:
 	{
 		return first==0;
 	}
+/** func
+функция засовывает элемент в начало
+*/
 	void pushBegin(const string& info)
 	{
 		ListItem *item = new ListItem(info, first);
 		first= item;
 	}
+	/** func
+функция засовывает элемент в конец
+*/
 	void pushEnd(const string& info)
 	{
 		ListItem *item = new ListItem(info);
@@ -37,6 +43,9 @@ public:
 		current->nextPtr=item;
 		return;
 	}
+	/** func
+функция убирает элемент в начале
+*/
 	void removeBegin()
 	{
 		ListItem *delItem;
@@ -50,6 +59,9 @@ public:
 			return;
 		}
 	}
+	/** func
+функция убирает элемент в конце
+*/
 	void removeEnd()
 	{
 		ListItem *current;
@@ -67,6 +79,9 @@ public:
 			return;
 		}
 	}
+	/** func
+функция стирает все
+*/
 	void removeAll()
 	{
 		if(first==0)
@@ -80,6 +95,9 @@ public:
 		}
 
 	}
+	/** func
+функция получает элемент в конце
+*/
 	void getEnd(string &info)
 	{
 		ListItem *current;
@@ -91,6 +109,9 @@ public:
 			current=current->nextPtr;
 		info=info+current->data + " \n";
 	}
+	/** func
+функция получает элемент в начале
+*/
 	void getBegin(string &info)
 	{
 		info=info + first->data + "  ";
